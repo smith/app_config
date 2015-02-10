@@ -1,4 +1,4 @@
-# AppConfig
+# AppConfig Cookbook
 
 This cookbook provides some tools that make managing application configuration
 more convenient.
@@ -92,6 +92,7 @@ AppConfig object in the first recipe you load and use the `node.run_state`:
 node.run_state[:app_config] ||= AppConfig.new(...)
 
 # recipe B
+include_recipe "my_cookbook:recipe_a"
 app_config = node.run_state[:app_config]
 ```
 
